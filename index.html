@@ -7,15 +7,25 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Country Information</h1>
-  
-  <label for ="countriesDropDown">Select country</label>
-  <select name="countriesDropDown" id="countriesDropDown">
-    <option value="test">Test</option>
-  </select>
+  <header>
+    <h1>Country Information</h1>
+    <label for ="countriesDropDown">Select country</label>
+    <select name="countriesDropDown" id="countriesDropDown"></select>
+  </header>
 
-  <h2>All country data: </h2>
-  <pre id = "apiOutput">All countries from the API are now shown in the dropdown above!</pre>
+  <div class="country-info-container">
+    <div>
+        <img id="countryFlag"><img>
+        <div>Currency: <div id="countryCurrency"></div> </div>
+    </div>
+    <div>
+        <pre id="apiOutput" class="json-output"></pre>
+    </div>
+  </div>
+
+  <footer>
+    <p>Footer</p>
+  </footer>
 
   <script type="module" src="app.js"></script>
 

@@ -19,10 +19,23 @@ function populateCountriesDropdown(){
     select.addEventListener('change', function() {
         handleCountrySelection(select.value);
     });
+
+    // Select initial value of dropdown
+    document.getElementById('countriesDropDown').selectedIndex= 0;
+    handleCountrySelection(document.getElementById('countriesDropDown').value);
+}
+
+function prettyDisplay(countryData){
+    document.getElementById('countryFlag').src = countryData.flags.png;
+
+    // Currency
+    document.getElementById('countryCurrency').innerHTML = countryData.currencies[Object.keys(countryData.currencies)[0]].name;
 }
 
 function handleCountrySelection(countryName){
-    displayJSONData(getCountryData(countryName));
+    var countryData = getCountryData(countryName);
+    displayJSONData(countryData);
+    prettyDisplay(countryData);
 }
 
 //document.getElementById('displayCountriesBtn').addEventListener('click', retrieveCountryData);

@@ -15,6 +15,11 @@ export async function retrieveCountryData(){
             throw new Error("Bad network response");
         }
         countriesData = await response.json();
+
+        // Sort the list alphabetically so our dropdown can be populated in alphabetical order
+        countriesData = countriesData.sort( (a,b) => {
+            return a.name.common.localeCompare(b.name.common);
+        });
     }catch(e){
         console.error('Error with fetch: ', e);
     }

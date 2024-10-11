@@ -1,18 +1,38 @@
+header {
+    background-color: skyblue;
+    padding: 30px;
+    text-align: center;
+    font-size: 35px;
+    color: white;
+    grid-column: span 2;
+}
+
+footer {
+    background-color: skyblue;
+    color: white;
+    grid-column: span 2;
+}
+
 body {
     font-family: Arial, sans-serif;
     text-align: center;
     margin-top: 50px;
 }
 
-button {
-padding: 10px 20px;
-font-size: 16px;
+select {
+padding: 10px 10px;
+font-size: 20px;
 }
 
-pre {
+.json-output {
     text-align: left;
     white-space: pre-wrap;
     background-color: #f4f4f4;
     padding: 10px;
     border: 1px solid #ddd;
+}
+
+.country-info-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
 }
