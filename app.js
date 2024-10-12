@@ -26,10 +26,14 @@ function populateCountriesDropdown(){
 }
 
 function prettyDisplay(countryData){
+    document.getElementById('countryName').innerHTML = countryData.name.common;
     document.getElementById('countryFlag').src = countryData.flags.png;
-
-    // Currency
-    document.getElementById('countryCurrency').innerHTML = countryData.currencies[Object.keys(countryData.currencies)[0]].name;
+    document.getElementById('countryCurrency').innerHTML = "<strong>Currency:</strong> " + countryData.currencies[Object.keys(countryData.currencies)[0]].name;
+    document.getElementById('countryRegion').innerHTML = "<strong>Region:</strong> " + countryData.region;
+    document.getElementById('countryCapital').innerHTML = "<strong>Capital city:</strong> "  + countryData.capital;
+    document.getElementById('countryPopulation').innerHTML = "<strong>Population:</strong> "  + countryData.population;
+    document.getElementById('countryLanguage').innerHTML = "<strong>Language:</strong> "  + 
+    Object.entries(countryData.languages).map(([key, value]) => `${value} (${key})`).join(', '); // Join the formatted strings with a comma
 }
 
 function handleCountrySelection(countryName){

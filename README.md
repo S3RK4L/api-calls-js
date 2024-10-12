@@ -7,6 +7,10 @@ Features:
 - Countries in the dropdown have now been ordered alphabetically
 - Select any country from the dropdown, and the country's flag and currency is displayed
 
+Ideas:
+- Countries quiz
+- All countries displayed initially with basic info - pagination could be used - select a country to view more information - filters/sort by / search for country
+
 ###### Skills demonstrated
 - JavaScript
 - RESTful API
