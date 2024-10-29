@@ -14,7 +14,7 @@ function populateCountriesDropdown(){
         opt.value = country.name.common;
         opt.innerHTML = country.name.common;
         select.appendChild(opt);
-    });
+    }); 
 
     select.addEventListener('change', function() {
         handleCountrySelection(select.value);
